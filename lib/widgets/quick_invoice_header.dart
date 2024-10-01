@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_responsive_dashboard/utils/app_styles.dart';
 
@@ -15,8 +14,8 @@ class QuickInvoiceHeader extends StatelessWidget {
         ),
         const Spacer(),
         Container(
-          width: 40.0,
-          height: 40.0,
+          width: 48.0,
+          height: 48.0,
           decoration: const ShapeDecoration(
             shape: OvalBorder(),
             color: Color(0xFFFAFAFA),
@@ -30,4 +29,3 @@ class QuickInvoiceHeader extends StatelessWidget {
     );
   }
 }
-
