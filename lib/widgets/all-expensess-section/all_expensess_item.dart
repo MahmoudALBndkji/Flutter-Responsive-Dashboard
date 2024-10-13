@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_responsive_dashboard/models/all_expensess_item_model.dart';
-import 'package:flutter_responsive_dashboard/widgets/active_and_inactive_all_expensess_item.dart';
+import 'package:flutter_responsive_dashboard/widgets/all-expensess-section/active_and_inactive_all_expensess_item.dart';
 
 class AllExpensessItem extends StatelessWidget {
   const AllExpensessItem(

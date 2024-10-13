@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_responsive_dashboard/models/user_info_model.dart';
 import 'package:flutter_responsive_dashboard/utils/assets_image.dart';
-import 'package:flutter_responsive_dashboard/widgets/user_info_list_tile.dart';
+import 'package:flutter_responsive_dashboard/widgets/shared/user_info_list_tile.dart';
 
 class LatestTransactionListView extends StatelessWidget {
   const LatestTransactionListView({super.key});

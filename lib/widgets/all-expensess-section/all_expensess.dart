@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_responsive_dashboard/widgets/all_expensess_header.dart';
-import 'package:flutter_responsive_dashboard/widgets/all_expensess_items_list_view.dart';
-import 'package:flutter_responsive_dashboard/widgets/custom_background_container.dart';
+import 'package:flutter_responsive_dashboard/widgets/all-expensess-section/all_expensess_header.dart';
+import 'package:flutter_responsive_dashboard/widgets/all-expensess-section/all_expensess_items_list_view.dart';
+import 'package:flutter_responsive_dashboard/widgets/shared/custom_background_container.dart';
 
 class AllExpensess extends StatelessWidget {
   const AllExpensess({super.key});
