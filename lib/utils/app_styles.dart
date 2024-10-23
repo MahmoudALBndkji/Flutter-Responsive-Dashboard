@@ -106,6 +106,7 @@ double getResponsiveFontSize(context, {required double fontSize}) {
 }
 
 double getScaleFactor(context) {
+  // ? Way To Get Width Screen Insted Of Media Query
   // var dispatcher = PlatformDispatcher.instance;
   // var physicalWidth = dispatcher.views.first.physicalSize.width;
   // var devicePixelRatio = dispatcher.views.first.devicePixelRatio;
