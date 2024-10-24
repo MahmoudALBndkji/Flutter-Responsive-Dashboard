@@ -5,6 +5,14 @@ import 'package:flutter_responsive_dashboard/widgets/all-expensess-section/all_e
 
 class AllExpensessItemsListView extends StatefulWidget {
   const AllExpensessItemsListView({super.key});
+
+  @override
+  State<AllExpensessItemsListView> createState() =>
+      _AllExpensessItemsListViewState();
+}
+
+class _AllExpensessItemsListViewState extends State<AllExpensessItemsListView> {
+  int selectedIndex = 0;
   static const items = [
     AllExpensessItemModel(
       image: AssetsImage.imagesBalance,
@@ -25,37 +33,46 @@ class AllExpensessItemsListView extends StatefulWidget {
       price: r'$95,150',
     ),
   ];
-
-  @override
-  State<AllExpensessItemsListView> createState() =>
-      _AllExpensessItemsListViewState();
-}
-
-class _AllExpensessItemsListViewState extends State<AllExpensessItemsListView> {
-  int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: AllExpensessItemsListView.items.asMap().entries.map((e) {
-        int index = e.key;
-        AllExpensessItemModel item = e.value;
-        return Expanded(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: index % 2 != 0 ? 12 : 0),
-            child: GestureDetector(
-              onTap: () {
-                if (selectedIndex != index) {
-                  setState(() => selectedIndex = index);
-                }
-              },
-              child: AllExpensessItem(
-                isSelected: selectedIndex == index,
-                itemModel: item,
-              ),
+      children: [
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() => selectedIndex = 0);
+            },
+            child: AllExpensessItem(
+              isSelected: selectedIndex == 0,
+              itemModel: items[0],
             ),
           ),
-        );
-      }).toList(),
+        ),
+        const SizedBox(width: 8.0),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() => selectedIndex = 1);
+            },
+            child: AllExpensessItem(
+              isSelected: selectedIndex == 1,
+              itemModel: items[1],
+            ),
+          ),
+        ),
+        const SizedBox(width: 8.0),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() => selectedIndex = 2);
+            },
+            child: AllExpensessItem(
+              isSelected: selectedIndex == 2,
+              itemModel: items[2],
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
